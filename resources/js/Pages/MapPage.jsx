@@ -8,10 +8,7 @@ export default function MapPage({ auth }) {
     ];
 
     return (
-        <AuthenticatedLayout
-            user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Location Map</h2>}
-        >
+        <div>
             <Head title="Map" />
 
             <div className="py-12">
@@ -26,6 +23,6 @@ export default function MapPage({ auth }) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
-    );
+
+        </div>);
 }
