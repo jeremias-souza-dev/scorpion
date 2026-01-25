@@ -4,7 +4,7 @@ import MapComponent from '@/Components/MapComponent';
 
 export default function MapPage({ auth }) {
     const markers = [
-        { position: [-23.5505, -46.6333], popupContent: "São Paulo Center" }
+        { position: [-23.5505, -46.6333], popupContent: "jeremias de souza" }
     ];
 
     return (

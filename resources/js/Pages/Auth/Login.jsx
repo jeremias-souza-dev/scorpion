@@ -65,7 +65,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="mt-4 block">
+                <div className="mt-4 block flex justify-between items-center">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
@@ -75,24 +75,31 @@ export default function Login({ status, canResetPassword }) {
                             }
                         />
                         <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">
-                            Remember me
-                        </span>
+                            Lembrar de mim                        </span>
                     </label>
-                </div>
-
-                <div className="mt-4 flex items-center justify-end">
                     {canResetPassword && (
                         <Link
                             href={route('password.request')}
                             className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
                         >
-                            Forgot your password?
-                        </Link>
+                            Esqueci minha senha                        </Link>
                     )}
+                </div>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Log in
-                    </PrimaryButton>
+                <div className="mt-4 flex flex-col space-y-4 items-center justify-center">
+
+
+                    <button className="flex p-3 bg-white rounded-lg font-medium items-center justify-center w-full text-center" disabled={processing}>
+                        Entrar
+                    </button>
+
+                    <div className='flex justify-center w-full items-center gap-4'>
+                        <div className='w-full h-[1px] bg-white'></div>
+                        <span className='text-white'>ou</span>
+                        <div className='w-full h-[1px] bg-white'></div>
+                    </div>
+
+                    <button className='bg-blue-600 text-white p-3 w-full rounded-lg'>Login com o google</button>
                 </div>
             </form>
         </GuestLayout>
